@@ -17,7 +17,7 @@ We beginnen met het starten met een losse pod. Een losse pod wordt niet veel geb
 We willen een pod starten met een playground applicatie.
 
 Maak een .yaml bestand met een pod definitie: 
- - 1 container: `rubenernst/kubernetes-playground:1.0.1`.
+ - 1 container: `rubenernst/kubernetes-playground:1.0.2`.
  - label: `app=playground`
  - specificeer poort 8080
 
@@ -77,4 +77,4 @@ Zet twee deployments op. De laatste (proxy) moet HTTP requests doorsturen naar d
 Test of de proxy werkt door deze in de browser aan te roepen.
 
 Hints:
- - Services (ook interne) :)
+ - Services (ook interne services) :)
