@@ -1,7 +1,7 @@
 # Basics
 De beginselen van Kubernetes.
 
-~Als je voor een pod of service poorten moet kiezen: alle applicaties draaien staandaard op 8080!~
+*Als je voor een pod of service poorten moet kiezen: alle applicaties draaien staandaard op 8080!*
 
 ## Doelen
 1. Een pod starten in ons cluster
