@@ -1,0 +1,47 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: {{WORKSHOP_USER_NAME}}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{WORKSHOP_USER_NAME}}
+  namespace: {{WORKSHOP_USER_NAME}}
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: {{WORKSHOP_USER_NAME}}
+  name: {{WORKSHOP_USER_NAME}}-all
+rules:
+  - apiGroups: ["", "apps", "batch", "extensions"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{WORKSHOP_USER_NAME}}-all-role-for-{{WORKSHOP_USER_NAME}}
+  namespace: {{WORKSHOP_USER_NAME}}
+subjects:
+  - kind: ServiceAccount
+    name: {{WORKSHOP_USER_NAME}}
+    namespace: {{WORKSHOP_USER_NAME}}
+roleRef:
+  kind: Role
+  name: {{WORKSHOP_USER_NAME}}-all
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: {{WORKSHOP_USER_NAME}}-cluster-admin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:  
+  - kind: ServiceAccount
+    name: {{WORKSHOP_USER_NAME}}
+    namespace: {{WORKSHOP_USER_NAME}}

@@ -1,0 +1,47 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: workshop-user-1
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: workshop-user-1
+  namespace: workshop-user-1
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: workshop-user-1
+  name: workshop-user-1-all
+rules:
+  - apiGroups: ["", "apps", "batch", "extensions"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: workshop-user-1-all-role-for-workshop-user-1
+  namespace: workshop-user-1
+subjects:
+  - kind: ServiceAccount
+    name: workshop-user-1
+    namespace: workshop-user-1
+roleRef:
+  kind: Role
+  name: workshop-user-1-all
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: workshop-user-1-cluster-admin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:  
+  - kind: ServiceAccount
+    name: workshop-user-1
+    namespace: workshop-user-1

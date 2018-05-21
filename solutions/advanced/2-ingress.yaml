@@ -1,0 +1,82 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playground-ingress-deployment
+spec:
+  selector:
+    matchLabels:
+      app: playground-ingress
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: playground-ingress
+    spec:
+      containers:
+      - name: playground-ingress
+        image: rubenernst/kubernetes-playground:1.0.2
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: playground-ingress-service
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: playground-ingress
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-ingress-deployment
+spec:
+  selector:
+    matchLabels:
+      app: user-ingress
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: user-ingress
+    spec:
+      containers:
+      - name: user-ingress
+        image: rubenernst/kubernetes-user-service:1.0.1
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-ingress-service
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-ingress
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: fanout-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /playground/*
+        backend:
+          serviceName: playground-ingress-service
+          servicePort: 8080
+      - path: /users/*
+        backend:
+          serviceName: user-ingress-service
+          servicePort: 8080

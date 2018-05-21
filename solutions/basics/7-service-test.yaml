@@ -1,0 +1,390 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-1
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-2
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-3
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-4
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-5
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-6
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-7
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-8
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-9
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-10
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-11
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-12
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-13
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-14
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-15
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-16
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-17
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-18
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-19
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-20
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-21
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-22
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-23
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-24
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-25
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-26
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-27
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-28
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-29
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service-30
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: user-service
+---
