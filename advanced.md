@@ -40,3 +40,16 @@ Maak daarna een Ingress die `/playground` door route naar de playground applicat
 Hints:
  - Specifieer geen host.
  - De twee services voor de applicaties moeten van het type NodePort zijn.
+ 
+ ### 3. Secrets
+ Secrets zijn er om veilig wachtwoorden op te slaan. Voor bijvoorbeeld database authenticatie. 
+ Voor de playground applicatie gaan we dat simuleren door de version te zetten via een secret.
+ 
+ Maak een secret aan met een versienummer en koppel deze aan environment variabele `VERSION` van de playground image (`rubenernst/kubernetes-playground:1.0.2`). Maak er een deployment van die via een load balancer te benaderen is. 
+ 
+ Check de versie door endpoint `/actuator/info` aan te roepen.
+ 
+ ### 4. ConfigMaps
+ Probeer hetzelfde als opdracht #3 te doen, maar dan via een ConfigMap. Want properties die geen gevoelige data bevatten, kunnen beter via een ConfigMap beheerd worden.
+ 
+ 
